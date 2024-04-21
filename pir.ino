@@ -3,9 +3,9 @@ int pir = A0; // PIR input
 long led = 0;
 void setup()
 {
-    Serial.begin(9600);
     pinMode(led, OUTPUT);
     pinMode(pir, INPUT);
+    Serial.begin(9600);
 }
 
 void loop()

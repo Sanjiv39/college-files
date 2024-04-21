@@ -3,9 +3,9 @@ int gas = A0; // Gas input
 long led = 0;
 void setup()
 {
-  Serial.begin(9600);
   pinMode(led, OUTPUT);
   pinMode(gas, INPUT);
+  Serial.begin(9600);
 }
 
 void loop()
