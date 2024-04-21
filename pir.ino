@@ -21,4 +21,5 @@ void loop()
         digitalWrite(led, LOW);
         Serial.println("Object not Detected");
     };
+    delay(1000);
 }
