@@ -1,5 +1,5 @@
 int status = 0;
-int pir = A0; // PIR input
+int pir = 1; // PIR input
 long led = 0;
 void setup()
 {
