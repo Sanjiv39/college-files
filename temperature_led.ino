@@ -11,7 +11,7 @@ void setup()
 
 void loop()
 {
-    val = map(((analogRead(input) - 20) * 3.04), 0, 1023, 40, 125);
+    val = map(((analogRead(input) - 20) * 3.04), 0, 1023, -40, 125);
     Serial.print("Temperature : ");
     Serial.print(val);
     Serial.println(" C");
