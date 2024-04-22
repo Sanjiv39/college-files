@@ -1,3 +1,4 @@
 ## SETUP
- ```pip install matplotlib```
- ```pip install graphics.py```
+```pip install matplotlib```
+
+```pip install graphics.py```
