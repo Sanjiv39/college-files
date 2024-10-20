@@ -12,3 +12,6 @@ picamera
 
 # 7 segment LED
 raspberrypi-tm1637
+
+# Telegram
+telepot
