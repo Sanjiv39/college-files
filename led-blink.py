@@ -2,6 +2,8 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 GPIO.setmode(GPIO.BOARD)
+
+# pins for led output
 r= [3,15,8,11,13,26,29,22]
 GPIO.setup(r, GPIO.OUT)
 
