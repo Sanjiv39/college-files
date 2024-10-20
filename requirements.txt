@@ -1,0 +1,10 @@
+# Main
+RPi.GPIO
+
+# RFID
+mfrc522
+
+# Fingerprint
+adafruit-circuitpython-fingerprint
+
+# 
