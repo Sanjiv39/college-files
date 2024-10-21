@@ -19,6 +19,7 @@ GPIO.setup(yellow, GPIO.OUT)
 GPIO.output(yellow, False)
 
 # Initialize the Telegram bot with your token
+token = "Your token here"
 bot = telebot.TeleBot(token, parse_mode=None)
 print('Started.....')
 
@@ -47,10 +48,17 @@ def msg_handler(msg = "", on = False):
 
 
 # Define a function to handle incoming Telegram messages
+@bot.message_handler(commands=['start'])
+def reply(msg):
+        bot.reply_to(msg, "Hi this bot turns on and off the leds")
+
+@bot.message_handler(commands=['help'])
+def reply(msg):
+        bot.reply_to(msg, "Use /on to turn on the leds\n\nUse /off to turn off the leds")
+
 @bot.message_handler(commands=['on', 'off'])
 def action(msg):
-    chat_id = msg['chat']['id']
-    command = msg['text']
+    command = msg.text
     print('Received: %s' % command)
     
     # Check for 'on' command and control LEDs accordingly
