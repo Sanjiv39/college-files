@@ -3,7 +3,7 @@ import time
 from datetime import datetime
 
 # Create an instance of the TM1637 display
-tm = tm1637.TM1637(clk=18, dio=17)
+tm = tm1637.TM1637(clk=16, dio=18)
 clear = [0, 0, 0, 0]
 tm.write(clear) 
 time.sleep(1)
