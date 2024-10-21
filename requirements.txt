@@ -5,7 +5,10 @@ RPi.GPIO
 mfrc522
 
 # Fingerprint
+# large-code
 adafruit-circuitpython-fingerprint
+# short-code
+pyfingerprint
 
 # Camera
 picamera
@@ -15,4 +18,5 @@ raspberrypi-tm1637
 
 # Telegram
 telepot
+# using pytgapi
 pytelegrambotapi
