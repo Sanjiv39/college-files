@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="project_1.master_page.Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            position: absolute;
+            top: 373px;
+            left: 1028px;
+            bottom: 303px;
+        }
+
+        .auto-style2 {
+            position: absolute;
+            top: 537px;
+            left: 1016px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <form id="form1" runat="server">
+        <html>
+        <head>
+            <title>Master</title>
+            <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+        </head>
+        <body>
+            <header id="header">
+                <h1>Demo Of Master Page</h1>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a href="home.aspx">Insight</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <aside id="side">
+                <h1>Info</h1>
+                <a href="#">
+                    <p>Product Type 1</p>
+                </a>
+                <a href="#">
+                    <p>Product Type 2</p>
+                </a>
+                <a href="#">
+                    <p>
+                        Product Type 3<a href="#"><asp:ScriptManager ID="ScriptManager1"
+                            runat="server">
+                        </asp:ScriptManager>
+                        </a>
+                    </p>
+                    <asp:Button ID="Button2" runat="server" CssClass="auto-style1" Style="z-index: 1"
+                        Text="Button" />
+                    <asp:Button ID="Button1" runat="server" CssClass="auto-style2" Text="Button" />
+            </aside>
+            <div id="con">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer id="footer">
+                copyright @Sambare
+            </footer>
+        </body>
+        </html>
+    </form>
+</body>
+</html>
+</html>
