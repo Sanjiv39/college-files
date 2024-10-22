@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace Vacation
 {
     public partial class Calendar : System.Web.UI.Page
@@ -39,18 +40,18 @@ namespace Vacation
         {
             if (e.Day.Date.Day == 5 && e.Day.Date.Month == 9)
             {
+                System.Web.UI.WebControls.Label lbl = new System.Web.UI.WebControls.Label();
                 e.Cell.BackColor = System.Drawing.Color.Yellow;
-                Label lbl = new Label();
+                lbl.Text = "<br>Teachers Day!";
+                e.Cell.Controls.Add(lbl);
             }
-            lbl.Text = "<br>Teachers Day!";
-            e.Cell.Controls.Add(lbl);
 
             if (e.Day.Date.Day == 13 && e.Day.Date.Month == 9)
             {
                 Calendar1.SelectedDate = new DateTime(2018, 9, 12);
                 Calendar1.SelectedDates.SelectRange(Calendar1.SelectedDate,
                 Calendar1.SelectedDate.AddDays(10));
-                Label lbl1 = new Label();
+                System.Web.UI.WebControls.Label lbl1 = new System.Web.UI.WebControls.Label();
                 lbl1.Text = "<br>Ganpati!";
                 e.Cell.Controls.Add(lbl1);
             }
