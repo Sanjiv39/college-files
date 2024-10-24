@@ -10,11 +10,11 @@ def bfs(graph, start_node):
             print(node)
             visited.add(node)
             queue.extend(graph[node])
-            
+
 graph = {
     'A': ['B', 'C'],
-    'B': ['D', 'E'],
-    'C': ['F'],
+    'B': ['D'],
+    'C': ['E'],
     'D': [],
     'E': ['F'],
     'F': []
