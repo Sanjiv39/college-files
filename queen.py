@@ -9,16 +9,16 @@ def is_safe(board, row, col):
         if board[row][i]:
             return False
 
-# Check upper diagonal on left side
-for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
-    if board[i][j]:
-        return False
+    # Check upper diagonal on left side
+    for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
+        if board[i][j]:
+            return False
 
-# Check lower diagonal on left side
-for i, j in zip(range(row, len(board)), range(col, -1, -1)):
-    if board[i][j]:
-        return False
-    return True
+    # Check lower diagonal on left side
+    for i, j in zip(range(row, len(board)), range(col, -1, -1)):
+        if board[i][j]:
+            return False
+        return True
 
 def solve_n_queens_util(board, col):
     if col >= len(board):
