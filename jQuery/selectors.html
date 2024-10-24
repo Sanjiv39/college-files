@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2>This is a heading</h2>
+    <p>This is a paragraph.</p>
+    <p id="test">This is another paragraph with id.</p>
+    <p class="para">Paragraph with class.</p>
+    <p class="para">Paragraph with class.</p>
+    <p id="text"></p>
+    <script>
+      $(document).ready(function () {
+        $("p").click(function () {
+          $("#text").text("Normal p element is clicked");
+        });
+        $(".para").click(function () {
+          $("#text").text("Para class p element is clicked");
+        });
+        $("#test").click(function () {
+          $("#text").text("p element with id test is clicked");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: #c60000;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box-1">Effect 1</div>
+    <div class="box" id="box-2">Effect 2</div>
+    <div class="box" id="box-3">Effect 3</div>
+    <button id="fade-in">Fade In</button>
+    <button id="fade-out">Fade Out</button>
+    <button id="fade-toggle">Fade Toggle</button>
+    <button id="slide-up">Slide Up</button>
+    <button id="slide-down">Slide Down</button>
+    <button id="slide-toggle">Slide Toggle</button>
+    <script>
+      $(document).ready(function () {
+        // Fade in
+        $("#fade-in").click(function () {
+          $("#box-1").fadeIn();
+          $("#box-2").fadeIn("slow");
+          $("#box-3").fadeIn(3000);
+        });
+
+        // Fade out
+        $("#fade-out").click(function () {
+          $("#box-1").fadeOut();
+          $("#box-2").fadeOut("slow");
+          $("#box-3").fadeOut(3000);
+        });
+
+        // Fade toggle
+        $("#fade-toggle").click(function () {
+          $("#box-1").fadeToggle();
+          $("#box-2").fadeToggle("slow");
+          $("#box-3").fadeToggle(3000);
+        });
+
+        // Slide Up
+        $("#slide-up").click(function () {
+          $("#box-1").slideUp();
+          $("#box-2").slideUp("slow");
+          $("#box-3").slideUp(3000);
+        });
+
+        // Slide Down
+        $("#slide-down").click(function () {
+          $("#box-1").slideDown();
+          $("#box-2").slideDown("slow");
+          $("#box-3").slideDown(3000);
+        });
+        
+        // Slide Toggle
+        $("#slide-toggle").click(function () {
+          $("#box-1").slideToggle();
+          $("#box-2").slideToggle("slow");
+          $("#box-3").slideToggle(3000);
+        });
+      });
+    </script>
+  </body>
+</html>
