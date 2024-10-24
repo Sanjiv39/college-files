@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get and Set Content</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <div class="box">This is a div</div>
+    <p class="box">This is a paragraph</p>
+    <input value="jQuery is amazing" />
+    <p id="res"></p>
+    <button id="getter">Click to get contents</button>
+    <button id="setter">Click to set contents</button>
+    <script>
+      $(document).ready(function () {
+        // Get
+        $("#getter").click(function () {
+          const div = $("div").html();
+          const p = $("p").text();
+          const val = $("input").val();
+          $("#res").html(`Div : ${div}<br>Paragraph : ${p}<br>Input : ${val}`);
+        });
+
+        // Set
+        $("#setter").click(function () {
+          const date = new Date().toDateString();
+          const div = $("div").html(`<p>Today is ${date}</p>`);
+          const p = $("p").text(`Today is ${date}`);
+          const val = $("input").val(`Today is ${date}`);
+        });
+      });
+    </script>
+  </body>
+</html>

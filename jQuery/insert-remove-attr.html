@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Remove and Attribute</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <div class="box">The div</div>
+    <a href="" target="_blank">Click on link</a>
+    <button id="append">Append</button>
+    <button id="prepend">Prepend</button>
+    <button id="before">Insert before</button>
+    <button id="after">Insert after</button>
+    <button id="remove">Remove</button>
+    <button id="empty">Empty</button>
+    <button id="attribute">Set link</button>
+    <script>
+      $(document).ready(function () {
+        // Append
+        $("#append").click(function () {
+          $(".box").append("<p>Line appended</p>");
+        });
+
+        // Prepend
+        $("#prepend").click(function () {
+          $(".box").prepend("<p>Line prepended</p>");
+        });
+
+        // Insert
+        // before
+        $("#before").click(function () {
+          $(".box").before("<p>Line before</p>");
+        });
+
+        // after
+        $("#after").click(function () {
+          $(".box").after("<p>Line after</p>");
+        });
+
+        // Remove
+        $("#remove").click(function () {
+          $(".box").remove();
+        });
+
+        // Empty
+        $("#empty").click(function () {
+          $(".box").empty();
+        });
+
+        // Attribute
+        $("#attribute").click(function () {
+          $("a").attr("href", "https://chatgpt.com");
+        });
+      });
+    </script>
+  </body>
+</html>
