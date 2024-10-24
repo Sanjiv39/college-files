@@ -1,0 +1,1 @@
+mongodump –db Hotel –collection Employee –out c:\backup

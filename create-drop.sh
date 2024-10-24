@@ -1,0 +1,2 @@
+use college
+db.dropDatabase()

@@ -1,0 +1,1 @@
+mongorestore –db Hotel –collection students c:\Test\ABC\students.bson
