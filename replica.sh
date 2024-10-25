@@ -14,7 +14,7 @@ start mongod -replSet utube -logpath F:\NGT\Replica\Data\rs3\3.log --dbpath F:\N
 mongo --port 27018
 
 # 6. Configure Server
-config={_id:"utube",members:[{_id:0,host:"localhost:27018"},{_id:1,host:" localhost:27019"}, {_id:2 host:"localhost:27020"}]}
+config={_id:"utube",members:[{_id:0,host:"localhost:27018"},{_id:1,host:" localhost:27019"}, {_id:2,host:"localhost:27020"}]}
 
 rs.initiate(config)
 
