@@ -17,5 +17,6 @@ print(r)
 #The result -0.76 shows that there is a relationship, not perfect, 
 #but it indicates that we could use linear regression in future predictions. 
 ##Predict Future Values : car age is 10 , predict speed 
-speed = myfunc(10) 
-print("Speed of 10 year old car is : ",speed) 
+age = 10
+speed = myfunc(age) 
+print(f"Speed of {age} year old car is : ",speed) 
