@@ -1,0 +1,50 @@
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.Manifest;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText tv_phoneno;
+    FloatingActionButton fab_callbtn;
+    static int PERMISSION_CODE = 100;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        tv_phoneno = findViewById(R.id.editTextPhone);
+        fab_callbtn = findViewById(R.id.fab_call);
+
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.CALL_PHONE }, PERMISSION_CODE);
+        }
+
+        fab_callbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phn = tv_phoneno.getText().toString();
+                Intent i = new Intent(Intent.ACTION_CALL);
+                i.setData(Uri.parse("tel:" + phn));
+                startActivity(i);
+            }
+        });
+    }
+}

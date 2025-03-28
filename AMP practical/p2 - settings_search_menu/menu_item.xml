@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        app:showAsAction="withText"
+        android:icon="@drawable/ic_settings"/>
+    <item
+        android:id="@+id/search"
+        android:title="Search"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_search" />
+    <item
+        android:id="@+id/composeEmail"
+        android:title="composeEmail"
+        app:showAsAction="ifRoom"
+        android:enabled="false"
+        android:icon="@drawable/ic_email"/>
+    <item
+        android:id="@+id/feedback"
+        android:title="Feedback"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_feedback"/>
+</menu>
